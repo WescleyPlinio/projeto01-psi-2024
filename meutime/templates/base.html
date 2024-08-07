@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titlle %} QUALQUER NOME {% endblock %}</title>
+</head>
+<body>
+    {% block content %} 
+        <nav class="navbar" style="background-color: rgb(37, 161, 58);">
+            <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="{% static cbv.jpg %}" alt="Bootstrap" width="150" height="40">
+            </a>
+            <a class="navbar-brend text-white" href="sobre.html">
+                Sobre
+            </a>
+            </div>
+        </nav>
+    {% endblock %}
+</body>
+</html>

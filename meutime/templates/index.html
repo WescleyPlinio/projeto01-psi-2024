@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title%}{{blocksuper}} - Início {% endblock %}
+{% block menufoto %}
+    <div class="card text-center text-bg-dark" style="border-radius: 0%;">
+        <img src="{% static '1.png' %}" class="card-img" alt="Seleção feminina">
+        <div class="card-img-overlay d-flex justify-content-center align-items-end" style="color: rgb(255,237,75);">
+        <h1>Seleção Brasileira feminina de voleibol <br> Olimpíadas Paris 2024</h1>
+    </div>
+{% endblock %}
