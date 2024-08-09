@@ -4,4 +4,38 @@
 
 {% block content %} 
 
+{% for aluno in criadores %}
+
+<div class="container mt-5">
+    <div class="card mb-5">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{% static atleta.foto %}" class="img-fluid rounded-start" alt="{{ atleta.nome }}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item h3">{{aluno.Nome}}</li>
+                        <li class="list-group-item h4"> Idade: {{aluno.Idade}}</li>
+                        <li class="list-group-item h4">Turma: {{aluno.Turma}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+<div class="container mt-5 mb-5">
+    Este site foi desenvolvido como parte de uma atividade prática da disciplina de Programação de Sistemas para Internet,
+    com foco nas atletas brasileiras de vôlei que participam das Olimpíadas de 2024. O objetivo é fornecer informações detalhadas 
+    sobre cada jogadora, incluindo nome, idade, local de nascimento e posição em que atuam na equipe. 
+    Além de ser uma ferramenta informativa, o site também reflete o aprendizado de conceitos fundamentais de desenvolvimento web,
+    como manipulação de dados em Python, renderização de templates e criação de interfaces amigáveis para os usuários .
+
+</div>
+
+
+
 {% endblock %}

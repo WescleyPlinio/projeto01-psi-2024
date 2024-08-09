@@ -3,22 +3,31 @@
 {% block title%}{{blocksuper}} - Atletas {% endblock %}
 
 {% block content %} 
+
+<h1 class="text-center mt-3"><strong>Atletas</strong></h1>
+
+{% for atleta in lista_jogadoras %}
+
 <div class="container">
-    <div class="card mb-3" style="width: 100%;">
+    <div class="card mb-5">
         <div class="row g-0">
-        <div class="col-md-4">
-            <img src="{% static 'imgs/thaisa.jpg' %}" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item h3">Thaisa Daher</li>
-                  <li class="list-group-item h4">Minas tenis club</li>
-                  <li class="list-group-item h4">A third item</li>
-                </ul>
+            <div class="col-md-4">
+                <img src="{% static atleta.foto %}" class="img-fluid rounded-start" alt="{{ atleta.nome }}">
             </div>
-        </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item h3">{{atleta.nome}}</li>
+                        <li class="list-group-item h4"> Idade: {{atleta.idade}}</li>
+                        <li class="list-group-item h4">Local de nascimento: {{atleta.local_nascimento}}</li>
+                        <li class="list-group-item h4">Posição: {{atleta.posicao}}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+{% endfor %}
+
 {% endblock %}
