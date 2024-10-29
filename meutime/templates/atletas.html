@@ -4,30 +4,24 @@
 
 {% block content %} 
 
-<h1 class="text-center mt-3 mb-2" style="color: rgb(17, 49, 96);"><strong>Atletas</strong></h1>
+<h1 class="text-center mt-3 mb-2" style="color: rgb(17, 49, 96);"><b>Atletas</b></h1>
 
-{% for atleta in lista_jogadoras %}
+<div class="container c85 d-flex flex-wrap justify-content-evenly">
 
-<div class="container">
-    <div class="card mb-5" style="background-color: rgb(17, 49, 96);">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="{% static atleta.foto %}" class="img-fluid rounded-start" alt="{{ atleta.nome }}">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item h1 bg-transparent text-white">{{atleta.nome}}</li>
-                        <li class="list-group-item h4 bg-transparent text-white"> Idade: {{atleta.idade}}</li>
-                        <li class="list-group-item h4 bg-transparent text-white">Local de nascimento: {{atleta.local_nascimento}}</li>
-                        <li class="list-group-item h4 bg-transparent text-white">Posição: {{atleta.posicao}}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% for atleta in atletas %}
+
+  <div class="card m-3" style="width: 23rem;">
+      <img src="{{atleta.foto.url}}" class="card-img-top" alt="{{atleta.nome}}">
+      <div class="card-body">
+        <h3 class="card-title" style="color: rgb(17, 49, 96);">{{atleta.nome}}</h3>
+        <p class="card-text">{{atleta.local_nasc}}</p>
+        <p class="card-text" style="color: rgb(17, 49, 96);">{{atleta.posicao}}</p>
+      </div>
+  </div>
 
 {% endfor %}
+
+</div>
+
 
 {% endblock %}
