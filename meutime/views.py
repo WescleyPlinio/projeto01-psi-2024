@@ -12,8 +12,8 @@ def atletas(request):
 
 def sobre(request):
     criadores = [
-        {"Nome":"Ellainy Nayara Motta dos Santos", "Idade": 17, "Turma": "INFOWEB3M", "foto":"static/imgs/lindia.jpg"},
-        {"Nome":"Wescley Plínio Damasceno Galdino", "Idade": 18, "Turma": "INFOWEB3M", "foto":"static/imgs/lindio.jpg"}
+        {"Nome":"Ellainy Nayara Motta dos Santos", "Idade": 17, "Turma": "INFOWEB3M", "foto":"imgs/lindia.jpg"},
+        {"Nome":"Wescley Plínio Damasceno Galdino", "Idade": 18, "Turma": "INFOWEB3M", "foto":"imgs/lindio.jpg"}
 
     ]
     context = {

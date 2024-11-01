@@ -12,7 +12,7 @@
 {% for aluno in criadores %}
 
 <div class="card m-3" style="width: 32rem;">
-    <img src="{{aluno.foto}}" class="card-img-top" alt="{{aluno.Nome}}">
+    <img src="{% static aluno.foto %}" class="card-img-top" alt="{{aluno.Nome}}">
     <div class="card-body">
       <h3 class="card-title" style="color: rgb(17, 49, 96);">{{aluno.Nome}}</h3>
       <p class="card-text">{{aluno.Idade}} anos</p>
